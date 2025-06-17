@@ -1,4 +1,28 @@
 # Solution for LeetCode problem: Longest Substring
 
-def solution():
-    pass
+"""
+Longest Substring Without Repeating Characters (LeetCode #3)
+
+Given a string s, find the length of the longest substring without repeating characters.
+
+Time Complexity: O(n) where n is the length of the string
+Space Complexity: O(min(m, n)) where m is the size of the character set
+"""
+
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        if not s:
+            return 0
+            
+        char_pos = {}  # Store the last position of each character
+        start = 0
+        max_len = 0
+        
+        for end, char in enumerate(s):
+            if char in char_pos and char_pos[char] >= start:
+                start = char_pos[char] + 1
+            else:
+                max_len = max(max_len, end - start + 1)
+            char_pos[char] = end
+            
+        return max_len
