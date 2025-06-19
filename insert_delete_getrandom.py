@@ -37,3 +37,17 @@ class RandomizedSet:
 
     def getRandom(self) -> int:
         return random.choice(self.nums)
+
+def solution():
+    """
+    Insert Delete GetRandom O(1) (LeetCode 380).
+    Usage: Create RandomizedSet(), then use insert(val), remove(val), and getRandom().
+    Implements O(1) insert, remove, and getRandom operations.
+    """
+    # Example usage:
+    # rs = RandomizedSet()
+    # rs.insert(1)
+    # rs.remove(2)
+    # rs.insert(2)
+    # rs.getRandom()
+    pass

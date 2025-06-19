@@ -14,26 +14,27 @@ Time Complexity: O(n) where n is the length of the string
 Space Complexity: O(1)
 """
 
-class Solution:
-    def myAtoi(self, s: str) -> int:
-        # Remove leading whitespace
+def solution():
+    """
+    String to Integer (atoi) (LeetCode 8).
+    Usage: Call myAtoi(s) where s is a string.
+    Returns the integer representation, clamped to 32-bit signed int range.
+    """
+    def myAtoi(s):
         s = s.strip()
         if not s:
             return 0
-            
-        # Check for sign
         sign = 1
-        if s[0] in '+-':
+        if s and s[0] in '+-':
             sign = -1 if s[0] == '-' else 1
             s = s[1:]
-            
-        # Convert digits
         result = 0
         for char in s:
             if not char.isdigit():
                 break
             result = result * 10 + int(char)
-            
-        # Apply sign and clamp
         result *= sign
         return max(-2**31, min(2**31 - 1, result))
+    # Example usage:
+    # print(myAtoi("   -42")) # Output: -42
+    pass

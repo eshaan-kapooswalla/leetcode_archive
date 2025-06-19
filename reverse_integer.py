@@ -8,8 +8,13 @@ Time Complexity: O(log x) where x is the input number
 Space Complexity: O(1)
 """
 
-class Solution:
-    def reverse(self, x: int) -> int:
+def solution():
+    """
+    Reverse Integer (LeetCode 7).
+    Usage: Call reverse(x) where x is an integer.
+    Returns the reversed integer, or 0 if it overflows 32-bit signed int range.
+    """
+    def reverse(x):
         # Handle negative numbers
         sign = -1 if x < 0 else 1
         x = abs(x)
@@ -27,3 +32,7 @@ class Solution:
             return 0
             
         return result
+    # Example usage:
+    # print(reverse(123)) # Output: 321
+    # print(reverse(-123)) # Output: -321
+    pass

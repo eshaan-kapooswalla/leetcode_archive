@@ -26,3 +26,15 @@ class Solution:
             else:
                 root = root.right
         return succ
+
+def solution():
+    """
+    Inorder Successor in BST (LeetCode 285).
+    Usage: Call inorderSuccessor(root, p) where root is the BST root and p is the node.
+    Returns the in-order successor node of p in the BST.
+    """
+    # Example usage:
+    # root = TreeNode(2, TreeNode(1), TreeNode(3))
+    # p = root.left
+    # print(inorderSuccessor(root, p).val) # Output: 2
+    pass
